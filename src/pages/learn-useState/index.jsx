@@ -19,8 +19,10 @@ export default function Counter() {
     useEffect(() => {
         if (count === 10) {
             setShowConditionalRendering(true);
+            document.documentElement.style.setProperty("--background-color", "black");
         } else {
             setShowConditionalRendering(false);
+            document.documentElement.style.setProperty("--background-color", "#282c34");
         }
     }, [count]);
 
